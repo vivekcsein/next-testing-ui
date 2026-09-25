@@ -1,0 +1,24 @@
+{
+  "editor.defaultFormatter": "biomejs.biome",
+
+  "editor.formatOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
+  "cSpell.words": [
+    "accordian",
+    "consolas",
+    "consolasligaturizedv",
+    "cyantrix",
+    "dribbble",
+    "Gsap",
+    "Inika",
+    "Kode",
+    "lede",
+    "ligaturized",
+    "nosniff",
+    "Oxanium",
+    "tweakcn"
+  ]
+}
