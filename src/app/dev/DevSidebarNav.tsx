@@ -28,6 +28,7 @@ const NAV_SECTIONS: {
       { label: "Buttons", id: "buttons" },
       { label: "Form controls", id: "forms" },
       { label: "Marquee", id: "marquee" },
+      { label: "Cards", id: "Cards" },
     ],
   },
 ];

@@ -2,7 +2,7 @@ import { z } from "zod";
 import { parseEnv } from "../utils/parse-env";
 
 // Server Environment Schema
-const serverEnvSchema = z.object({
+const parsedEnvSchema = z.object({
   NODE_ENV: z
     .enum(["development", "production", "test"])
     .default("development"),
@@ -16,16 +16,16 @@ const serverEnvSchema = z.object({
 });
 
 // Validated Server Environment
-const serverEnv = parseEnv(serverEnvSchema, "server");
+const parsedEnv = parseEnv(parsedEnvSchema, "server");
 
 // Application Environment Config
 export const envAppConfig = Object.freeze({
-  NODE_ENV: serverEnv.NODE_ENV,
-  port: serverEnv.PORT,
+  NODE_ENV: parsedEnv.NODE_ENV,
+  port: parsedEnv.PORT,
 
-  isDevelopment: serverEnv.NODE_ENV === "development",
-  isProduction: serverEnv.NODE_ENV === "production",
-  isTest: serverEnv.NODE_ENV === "test",
+  isDevelopment: parsedEnv.NODE_ENV === "development",
+  isProduction: parsedEnv.NODE_ENV === "production",
+  isTest: parsedEnv.NODE_ENV === "test",
 });
 
 export type EnvAppConfig = typeof envAppConfig;

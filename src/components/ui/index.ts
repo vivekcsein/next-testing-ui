@@ -1,6 +1,6 @@
 export { default as AccordionItem } from "./accordion/AccordionItem";
 export { Button, type ButtonSize, type ButtonVariant } from "./buttons/Button";
-export { default as Card } from "./card/Card";
+export { type CardVariant, default as Card } from "./cards/Card";
 export { default as Drawer } from "./drawer/Drawer";
 export { default as Hamburger } from "./hamburger/Hamburger";
 export { default as Icon, type IconName } from "./icon/IconsLibrary";

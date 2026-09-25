@@ -18,6 +18,7 @@ const PANELS: Record<DevSection, ComponentType> = {
   styles: lazy(() => import("./panels/StylePanel")),
   Links: lazy(() => import("./panels/LinksPanel")),
   marquee: lazy(() => import("./panels/MarqueePanel")),
+  Cards: lazy(() => import("./panels/CardPanels")),
 };
 
 const PanelFallback = () => (
