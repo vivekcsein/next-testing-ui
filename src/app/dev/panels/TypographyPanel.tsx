@@ -15,7 +15,7 @@ const FONT_FAMILIES = [
     name: "Mono — Kode Mono",
     role: "Code, tokens, data",
     family: "var(--font-mono)",
-    sample: "Design_that_scales();",
+    sample: "Design that scales",
   },
 ];
 

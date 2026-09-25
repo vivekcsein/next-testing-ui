@@ -40,11 +40,8 @@
 }
 
 @media (max-width: 900px) {
-  .dev-sidebar {
-    position: static;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--sidebar-border);
+  .dev-sidebar-desktop {
+    display: none;
   }
 }
 
@@ -124,6 +121,67 @@
 
 .dev-sidebar-back:hover {
   color: var(--sidebar-foreground);
+}
+
+/* ---------- Mobile nav toggle + Drawer ----------
+   Regenerated with the shared <Drawer> (components/ui/drawer) instead
+   of the old CSS-only stacked-sidebar trick. The toggle only shows
+   below 900px — the desktop sidebar (.dev-sidebar-desktop) is hidden
+   there instead (see above). The drawer panel is re-themed to the
+   same --sidebar-* tokens so it reads identically to the desktop nav. */
+
+.dev-nav-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.dev-mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .dev-mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background: var(--sidebar);
+    border: none;
+    border-bottom: 1px solid var(--sidebar-border);
+    cursor: pointer;
+  }
+}
+
+.dev-mobile-nav-toggle:hover .dev-sidebar-eyebrow,
+.dev-mobile-nav-toggle:focus-visible .dev-sidebar-eyebrow {
+  color: var(--sidebar-primary);
+}
+
+.dev-mobile-nav-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring) inset;
+}
+
+.dev-mobile-nav-root .drawer-panel {
+  background: var(--sidebar);
+  color: var(--sidebar-foreground);
+}
+
+.dev-mobile-nav-root .drawer-header {
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+.dev-mobile-nav-root .drawer-title {
+  color: var(--sidebar-foreground);
+}
+
+.dev-mobile-nav-root .drawer-close-btn span {
+  background: var(--sidebar-foreground);
+}
+
+.dev-mobile-nav-root .drawer-footer {
+  border-top: 1px solid var(--sidebar-border);
 }
 
 /* ---------- Content ---------- */
